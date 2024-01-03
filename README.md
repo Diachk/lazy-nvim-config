@@ -16,7 +16,13 @@ brew tap homebrew/cask-fonts
 brew install font-jetbrains-mono-nerd-font
 ```
 - Lazy git [instructions](https://github.com/jesseduffield/lazygit) prefer brew install process
+```console
+brew install jesseduffield/lazygit/lazygit
+```
 - rigrep [instructions](https://github.com/BurntSushi/ripgrep#installation) prefer brew install process
+```console
+brew install rigrep
+```
 - fd [instructions](https://github.com/sharkdp/fd) prefer brew install process
 
 ## Step 3: Install Lazyvim
