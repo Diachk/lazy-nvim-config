@@ -24,6 +24,9 @@ brew install jesseduffield/lazygit/lazygit
 brew install rigrep
 ```
 - fd [instructions](https://github.com/sharkdp/fd) prefer brew install process
+```console
+brew install fd
+```
 
 ## Step 3: Install Lazyvim
 - Backup files
