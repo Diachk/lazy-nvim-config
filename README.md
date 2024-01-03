@@ -16,5 +16,5 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 ## Step 2: Install Lazyvim
 - Follow the instuction to install the plugin [LazyVim install](https://www.lazyvim.org/installation)
 ```console
-git clone https://github.com/LazyVim/starter ~/.config/nvim
+git clone https://github.com/Diachk/lazy-nvim-config.git ~/.config/nvim
 ````
