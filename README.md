@@ -4,7 +4,9 @@ A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
 Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
 
 ## Step 1: Install Neovim
-- brew install neovim
+```console
+brew install neovim
+```
 
 ## Step 2: Install pre-requisites
 - Nerd fonts [instructions](https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts) prefer brew install process
