@@ -9,43 +9,36 @@ brew install neovim
 ```
 
 ## Step 2: Install pre-requisites
-- Nerd fonts [instructions](https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts) prefer brew install process
-    - You migth also want configure your terminal to use the font you've just downloaded
 ```console
+# Nerd fonts
 brew tap homebrew/cask-fonts
-```
-```console
 brew install font-jetbrains-mono-nerd-font
-```
-- Lazy git [instructions](https://github.com/jesseduffield/lazygit) prefer brew install process
-```console
+
+# Lazy git
 brew install jesseduffield/lazygit/lazygit
-```
-- rigrep [instructions](https://github.com/BurntSushi/ripgrep#installation) prefer brew install process
-```console
+
+# RiGrep
 brew install rigrep
-```
-- fd [instructions](https://github.com/sharkdp/fd) prefer brew install process
-```console
+
+# fd
 brew install fd
 ```
 
 ## Step 3: Install Lazyvim
-- Backup files
+- Pull the config
 ```console
-# required
+# Backup
 mv ~/.config/nvim{,.bak}
-
-# optional but recommended
 mv ~/.local/share/nvim{,.bak}
 mv ~/.local/state/nvim{,.bak}
 mv ~/.cache/nvim{,.bak}
-```
-- Pull the config
-```console
+
+# Pull
 git clone https://github.com/Diachk/lazy-nvim-config.git ~/.config/nvim
-````
-- Start NeoVim
-```console
+
+# Go
 neovim
-```
+````
+
+## Example configs
+- https://github.com/rtgiskard/lazyNvim
