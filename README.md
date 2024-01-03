@@ -9,6 +9,12 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 ## Step 2: Install pre-requisites
 - Nerd fonts [instructions](https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts) prefer brew install process
     - You migth also want configure your terminal to use the font you've just downloaded
+```console
+brew tap homebrew/cask-fonts
+```
+```console
+brew install font-jetbrains-mono-nerd-font
+```
 - Lazy git [instructions](https://github.com/jesseduffield/lazygit) prefer brew install process
 - rigrep [instructions](https://github.com/BurntSushi/ripgrep#installation) prefer brew install process
 - fd [instructions](https://github.com/sharkdp/fd) prefer brew install process
