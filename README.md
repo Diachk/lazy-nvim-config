@@ -13,8 +13,7 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 - rigrep [instructions](https://github.com/BurntSushi/ripgrep#installation) prefer brew install process
 - fd [instructions](https://github.com/sharkdp/fd) prefer brew install process
 
-## Step 2: Install Lazyvim
-- Follow the instuction to install the plugin [LazyVim install](https://www.lazyvim.org/installation)
+## Step 3: Install Lazyvim
 - Backup files
 ```console
 # required
