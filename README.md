@@ -29,3 +29,7 @@ mv ~/.cache/nvim{,.bak}
 ```console
 git clone https://github.com/Diachk/lazy-nvim-config.git ~/.config/nvim
 ````
+- Start NeoVim
+```console
+neovim
+```
