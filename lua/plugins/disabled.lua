@@ -1,4 +1,5 @@
 return {
   "ggandor/leap.nvim",
-  enabled = false,
+  enabled = true,
+  keys = {},
 }
