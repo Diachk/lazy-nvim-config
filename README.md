@@ -25,9 +25,8 @@ brew install fd
 ```
 
 ## Step 3: Install Lazyvim
-- Pull the config
 ```console
-# Pull
+# Pull the config
 git clone https://github.com/Diachk/lazy-nvim-config.git ~/.config/nvim
 
 # Go
@@ -35,7 +34,7 @@ neovim
 ````
 
 ## Uninstall
-```
+```console
 # Backup
 rm -rf ~/.config/nvim
 rm -rf ~/.local/share/nvim
