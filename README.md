@@ -35,7 +35,7 @@ neovim
 
 ## Uninstall
 ```console
-# Backup
+# Delete evrything, you might want to backup first
 rm -rf ~/.config/nvim
 rm -rf ~/.local/share/nvim
 rm -rf ~/.local/state/nvim
