@@ -9,8 +9,8 @@ return {
       -- `auto` will automatically set style based on background set with vim.o.background
       style = "auto",
       variant = "default", -- Theme comes in four variants `default`, `tinted`, `deuteranopia`, and `tritanopia`
-      transparent = true, -- Transparent background (as supported by the terminal)
-      dim_inactive = false, -- "non-current" windows are dimmed
+      transparent = false, -- Transparent background (as supported by the terminal)
+      dim_inactive = true, -- "non-current" windows are dimmed
       styles = {
         -- Style to be applied to different syntax groups
         -- Value is any valid attr-list value for `:help nvim_set_hl`
@@ -25,7 +25,7 @@ return {
       ---@param colors ColorScheme
       on_colors = function(colors)
         colors.bg_active = "#ffffff" -- changed from #e0e0e0, we also like #f8f9fa
-        colors.visual = "#72f64a"
+        colors.visual = "#cbf0d3"
       end,
 
       --- You can override specific highlights to use other groups or a hex color
@@ -37,10 +37,10 @@ return {
         highlights.PmenuSel = { bg = colors.bg_hl_line }
         highlights.PmenuExtra = { bg = colors.bg_alt }
         highlights.FloatBorder = { bg = colors.bg_alt }
-        highlights.NormalFloat = { bg = "#f8f9fa" }
+        -- highlights.NormalFloat = { bg = "#f8f9fa" } -- Change the floating windows background to light grey
         highlights.CursorLine = { bg = "#effaff" }
         highlights.Directory = { fg = "#000000" }
-        highlights.LineNr = { fg = colors.fg_dim, bg = "#ffffff" }
+        -- highlights.LineNr = { fg = colors.fg_dim, bg = "#ffffff" }
       end,
     })
 
