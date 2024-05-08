@@ -2,6 +2,9 @@ return {
   "nvim-lualine/lualine.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
+    -- PERF: we don't need this lualine require madness 🤷
+    local lualine_require = require("lualine_require")
+    lualine_require.require = require
     require("lualine").setup({
       options = {
         icons_enabled = true,
@@ -9,7 +12,7 @@ return {
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
         disabled_filetypes = {
-          statusline = {},
+          statusline = { "dashboard", "alpha", "starter" },
           winbar = {},
         },
         ignore_focus = {},
