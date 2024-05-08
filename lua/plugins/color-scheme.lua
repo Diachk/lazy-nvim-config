@@ -40,6 +40,7 @@ return {
         highlights.NormalFloat = { bg = "#f8f9fa" }
         highlights.CursorLine = { bg = "#effaff" }
         highlights.Directory = { fg = "#000000" }
+        highlights.LineNr = { fg = colors.fg_dim, bg = "#ffffff" }
       end,
     })
 
