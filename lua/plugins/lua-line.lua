@@ -1,3 +1,38 @@
+local colors = {
+  black = "#000000",
+  maroon = "#800000",
+  green = "#008000",
+  hlGreen = "#cbf0d3",
+  olive = "#808000",
+  navy = "#000080",
+  purple = "#800080",
+  teal = "#008080",
+  silver = "#c0c0c0",
+  gray = "#808080",
+  red = "#ff0000",
+  lime = "#00ff00",
+  yellow = "#ffff00",
+  blue = "#0000ff",
+  fuchsia = "#ff00ff",
+  aqua = "#00ffff",
+  white = "#ffffff",
+}
+
+local custom16Colors = {
+  normal = {
+    a = { fg = colors.white, bg = colors.blue, gui = "bold" },
+    b = { fg = colors.white, bg = colors.gray },
+    c = { fg = colors.silver, bg = colors.black },
+  },
+  insert = { a = { fg = colors.white, bg = colors.green, gui = "bold" } },
+  visual = { a = { fg = colors.black, bg = colors.hlGreen, gui = "bold" } },
+  replace = { a = { fg = colors.white, bg = colors.red, gui = "bold" } },
+  inactive = {
+    a = { fg = colors.silver, bg = colors.gray, gui = "bold" },
+    b = { fg = colors.gray, bg = colors.black },
+    c = { fg = colors.silver, bg = colors.black },
+  },
+}
 return {
   "nvim-lualine/lualine.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -8,7 +43,7 @@ return {
     require("lualine").setup({
       options = {
         icons_enabled = true,
-        theme = "16color",
+        theme = custom16Colors,
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
         disabled_filetypes = {
