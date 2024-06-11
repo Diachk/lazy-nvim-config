@@ -1,4 +1,3 @@
-local notify = "notify"
 return {
   "miikanissi/modus-themes.nvim",
   lazy = false,
