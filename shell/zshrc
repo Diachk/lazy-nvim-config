@@ -1,0 +1,4 @@
+export MY_HOME=$HOME/.config/nvim/shell
+source $MY_HOME/zsh-env.sh
+source $MY_HOME/zsh-omz.sh
+source $MY_HOME/zsh-aliases.sh
