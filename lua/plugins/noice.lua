@@ -1,3 +1,4 @@
+local text = require("noice.text")
 return {
   "folke/noice.nvim",
   event = "VeryLazy",
@@ -164,7 +165,23 @@ return {
             replace = true,
             render = "plain",
             format = { "{message}" },
-            win_options = { concealcursor = "n", conceallevel = 3 },
+            size = {
+              max_width = math.floor(0.5 * vim.api.nvim_win_get_width(0)),
+              max_height = 15,
+            },
+            position = { row = 2, col = 2 },
+            border = {
+              style = "rounded",
+              padding = { 0, 0, 0, 0 },
+            },
+            win_options = {
+              concealcursor = "n",
+              conceallevel = 3,
+              winhighlight = {
+                Normal = "LspFloatWinNormal",
+                FloatBorder = "LspFloatWinBorder",
+              },
+            },
           },
         },
       },

@@ -15,7 +15,7 @@ return {
         -- Style to be applied to different syntax groups
         -- Value is any valid attr-list value for `:help nvim_set_hl`
         comments = { italic = true },
-        keywords = { italic = true },
+        keywords = { italic = false, fg = "#0000b5" },
         functions = {},
         variables = {},
       },
@@ -36,11 +36,27 @@ return {
         highlights.Pmenu = { bg = colors.bg_alt }
         highlights.PmenuSel = { bg = colors.bg_hl_line }
         highlights.PmenuExtra = { bg = colors.bg_alt }
-        highlights.FloatBorder = { bg = colors.bg_alt }
+        highlights.FloatBorder = { bg = colors.bg_alt, fg = colors.fg_main }
+        highlights.LspFloatWinBorder = { fg = colors.fg_main, bg = colors.bg_main, style = "bold" } -- border to the documentation window
+        highlights.LspFloatWinNormal = { bg = colors.bg_main, style = "bold" } -- Change the floating windows background to light grey
+        -- highlights.NoicePopupBorder = { fg = colors.red }
         -- highlights.NormalFloat = { bg = "#f8f9fa" } -- Change the floating windows background to light grey
         highlights.CursorLine = { bg = "#effaff" }
         highlights.Directory = { fg = "#000000" }
         -- highlights.LineNr = { fg = colors.fg_dim, bg = "#ffffff" }
+
+        -- Code
+        highlights.String = { fg = "#0c703e" }
+        highlights["@keyword.import"] = { fg = "#0000b5" }
+        highlights["@keyword.function"] = { fg = "#0000b5" }
+        highlights["@lsp.typemod.function.declaration"] = { fg = "#1c2833" }
+        highlights["@lsp.type.function"] = { fg = "#1c2833", italic = true }
+        highlights["@lsp.type.method"] = { fg = colors.cyan_faint }
+        highlights["@function.method.call"] = { bold = true }
+        highlights["@function.call"] = { bold = true }
+        -- highlights["@lsp.typemod.function.readonly.typescript"] = { underline = true }
+        highlights.Operator = { fg = "#cf000f" }
+        highlights.Underlined = { underline = true, fg = "#444444" }
       end,
     })
 
