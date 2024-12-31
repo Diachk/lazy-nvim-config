@@ -1,3 +1,11 @@
+-- Define a convenience function for feeding keys
+local function feed_keys(keys, mode)
+  -- Convert special notation (e.g., <Esc>) to internal key codes
+  local termcodes = vim.api.nvim_replace_termcodes(keys, true, false, true)
+  -- Feed the keys into Neovim
+  vim.api.nvim_feedkeys(termcodes, mode, false)
+end
+
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
@@ -56,3 +64,8 @@ vim.keymap.set("n", "<leader>ct", function()
     LazyVim.format({ force = true })
   end, 500)
 end, { desc = "Tidy typescript code" })
+-- AI implementation from comment
+vim.keymap.set("v", "<leader>ai", function()
+  vim.cmd("AvanteEdit")
+  feed_keys("Do what the first comment says. Do nothing if there is no actionable comment.<C-s>", "i")
+end, { desc = "AI implement what the comment says" })
