@@ -69,3 +69,6 @@ vim.keymap.set("v", "<leader>ai", function()
   vim.cmd("AvanteEdit")
   feed_keys("Do what the first comment says. Do nothing if there is no actionable comment.<C-s>", "i")
 end, { desc = "AI implement what the comment says" })
+
+-- Oil file explorer
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
