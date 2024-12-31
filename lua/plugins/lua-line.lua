@@ -13,9 +13,13 @@ local colors = {
   lime = "#00ff00",
   yellow = "#ffff00",
   blue = "#0000ff",
+  lblue = "#00b4c5",
+  lgreen = "#00bf7d",
   fuchsia = "#ff00ff",
   aqua = "#00ffff",
   white = "#ffffff",
+  grey = "#444444",
+  brown = "#c44601",
 }
 
 local custom16Colors = {
@@ -33,6 +37,38 @@ local custom16Colors = {
     c = { fg = colors.silver, bg = colors.black },
   },
 }
+local modernDark = {
+  normal = {
+    a = { fg = colors.white, bg = colors.grey, gui = "bold" },
+    b = { fg = colors.white, bg = colors.gray },
+    c = { fg = colors.white, bg = colors.black },
+  },
+  insert = { a = { fg = colors.white, bg = colors.green, gui = "bold" } },
+  visual = { a = { fg = colors.black, bg = colors.hlGreen, gui = "bold" } },
+  replace = { a = { fg = colors.white, bg = colors.red, gui = "bold" } },
+  inactive = {
+    a = { fg = colors.silver, bg = colors.gray, gui = "bold" },
+    b = { fg = colors.gray, bg = colors.black },
+    c = { fg = colors.silver, bg = colors.black },
+  },
+}
+
+local modernVibrant = {
+  normal = {
+    a = { fg = colors.white, bg = colors.brown, gui = "bold" },
+    b = { fg = colors.white, bg = colors.gray },
+    c = { fg = colors.white, bg = colors.black },
+  },
+  insert = { a = { fg = colors.black, bg = colors.lgreen, gui = "bold" } },
+  visual = { a = { fg = colors.black, bg = colors.hlGreen, gui = "bold" } },
+  replace = { a = { fg = colors.white, bg = colors.red, gui = "bold" } },
+  inactive = {
+    a = { fg = colors.silver, bg = colors.gray, gui = "bold" },
+    b = { fg = colors.gray, bg = colors.black },
+    c = { fg = colors.silver, bg = colors.black },
+  },
+}
+
 return {
   "nvim-lualine/lualine.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -43,7 +79,7 @@ return {
     require("lualine").setup({
       options = {
         icons_enabled = true,
-        theme = custom16Colors,
+        theme = modernVibrant,
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
         disabled_filetypes = {
@@ -68,7 +104,7 @@ return {
             end,
           },
         },
-        lualine_b = { "branch", "diff", "diagnostics" },
+        lualine_b = {}, -- { "branch", "diff", "diagnostics" },
         lualine_c = {
           {
             "filename",
@@ -91,10 +127,12 @@ return {
           },
         },
         lualine_x = {
+          -- mode: e.g: Recording macro
           {
             require("noice").api.status.mode.get,
             cond = require("noice").api.status.mode.has,
           },
+          -- last command: e.g: cw
           {
             require("noice").api.status.command.get,
             cond = require("noice").api.status.command.has,
@@ -108,7 +146,11 @@ return {
               mac = "", -- e711
             },
           },
-          "filetype",
+          {
+            "filetype",
+            colored = false,
+            icon = { align = "left" },
+          },
         },
         lualine_y = { "progress" },
         lualine_z = { "location" },
