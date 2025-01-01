@@ -36,7 +36,7 @@ return {
         highlights.Pmenu = { bg = colors.bg_alt }
         highlights.PmenuSel = { bg = colors.bg_hl_line }
         highlights.PmenuExtra = { bg = colors.bg_alt }
-        highlights.FloatBorder = { bg = colors.bg_alt, fg = colors.fg_main }
+        highlights.FloatBorder = { bg = colors.bg_main, fg = colors.fg_main }
         highlights.LspFloatWinBorder = { fg = colors.fg_main, bg = colors.bg_main, style = "bold" } -- border to the documentation window
         highlights.LspFloatWinNormal = { bg = colors.bg_main, style = "bold" } -- Change the floating windows background to light grey
         -- highlights.NoicePopupBorder = { fg = colors.red }
@@ -44,6 +44,12 @@ return {
         highlights.CursorLine = { bg = "#effaff" }
         highlights.Directory = { fg = "#000000" }
         -- highlights.LineNr = { fg = colors.fg_dim, bg = "#ffffff" }
+        highlights["NormalNC"] = { bg = "#ffffff" }
+        highlights["GitConflictAncestor"] = { bg = "#d9e4ff", fg = colors.fg_main }
+        highlights["GitConflictAncestorLabel"] = { bg = "#8b95f6", fg = colors.fg_main, bold = true }
+        highlights["GitConflictIncoming"] = { bg = colors.visual, fg = colors.fg_main, bold = false }
+        highlights["GitConflictIncomingLabel"] = { bg = "#90d8b2", fg = colors.fg_main, bold = true }
+        highlights["GitConflictCurrentLabel"] = { bg = "#ddad24", bold = true }
 
         -- Code
         highlights.String = { fg = "#0c703e" }

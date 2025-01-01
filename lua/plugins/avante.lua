@@ -65,19 +65,19 @@ return {
         reverse_switch_windows = "<S-Tab>",
       },
     },
-    hints = { enabled = false },
+    hints = { enabled = false }, -- <leader>ae <leader>aa hinted in visual mode
     windows = {
       ---@type "right" | "left" | "top" | "bottom"
       position = "right", -- the position of the sidebar
       wrap = true, -- similar to vim.o.wrap
       width = 30, -- default % based on available width
       sidebar_header = {
-        enabled = true, -- true, false to enable/disable the header
+        enabled = false, -- true, false to enable/disable the header
         align = "center", -- left, center, right for title
         rounded = true,
       },
       input = {
-        prefix = "> ",
+        prefix = "",
         height = 8, -- Height of the input window in vertical layout
       },
       edit = {
@@ -86,7 +86,7 @@ return {
       },
       ask = {
         floating = false, -- Open the 'AvanteAsk' prompt in a floating window
-        start_insert = true, -- Start insert mode when opening the ask window
+        start_insert = false, -- Start insert mode when opening the ask window
         border = "rounded",
         ---@type "ours" | "theirs"
         focus_on_apply = "ours", -- which diff to focus after applying
