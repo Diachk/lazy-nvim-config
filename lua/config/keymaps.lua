@@ -47,7 +47,7 @@ vim.keymap.set("n", "<leader>dm", ":delmarks ", { desc = "Stream current buffer 
 -- Close buffler split
 vim.keymap.set("n", "<leader>bx", ":quit<CR>", { desc = "Close focused split buffer" })
 -- Jump to implementation
-vim.keymap.set("n", "<leader>gi", "<cmd>Telescope lsp_implementations<cr>", { desc = "Telescope Go to implementation" })
+vim.keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<cr>", { desc = "Telescope Go to implementation" })
 -- Set filte-type
 vim.keymap.set("n", "<leader>ft", ":set filetype=", { desc = "Set file type" })
 -- Tidy code
