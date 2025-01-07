@@ -38,10 +38,10 @@ end, { desc = "Yank current file path to system clipboard" })
 vim.keymap.set("v", "<leader>y", '"*y', { desc = "Yank to system clipboard" })
 -- jq
 vim.keymap.set("n", "<leader>jq", ":%!jq<CR>", { desc = "Stream current buffer to jq (json.parse current buffer)" })
--- Telescope resume last search
-vim.keymap.set("n", "<leader><space>", function()
-  vim.cmd("Telescope resume")
-end, { desc = "Telescope resume last search" })
+-- -- Telescope resume last search
+-- vim.keymap.set("n", "<leader><space>", function()
+--   vim.cmd("Telescope resume")
+-- end, { desc = "Telescope resume last search" })
 -- Delete mark
 vim.keymap.set("n", "<leader>dm", ":delmarks ", { desc = "Stream current buffer to jq (json.parse current buffer)" })
 -- Close buffler split
