@@ -72,3 +72,13 @@ end, { desc = "AI implement what the comment says" })
 
 -- Oil file explorer
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
+-- Enable color preview
+vim.keymap.set("n", "<leader>u#", ":ColorizerToggle<CR>", { desc = "Toggle color preview" })
+vim.keymap.set("n", "<C-3>", ":ColorizerToggle<CR>", { desc = "Toggle color preview" })
+
+vim.keymap.set("n", "<C-n>", ":cnext<CR>", { noremap = true, silent = true, desc = "Next Quickfix Item" })
+vim.keymap.set("n", "<C-p>", ":cprev<CR>", { noremap = true, silent = true, desc = "Previous Quickfix Item" })
+
+-- Select all
+vim.keymap.set("n", "VV", "ggVG", { noremap = true, silent = true })

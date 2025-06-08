@@ -7,3 +7,6 @@ export PATH="/Applications/WebStorm.app/Contents/MacOS:$PATH"
 # Chromium location
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 export PUPPETEER_EXECUTABLE_PATH=$(which chromium)
+
+# Boundary
+export BOUNDARY_ADDR="https://boundary.orion.hcommgmt.com"

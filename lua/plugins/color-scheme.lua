@@ -55,14 +55,16 @@ return {
         highlights.String = { fg = "#0c703e" }
         highlights["@keyword.import"] = { fg = "#0000b5" }
         highlights["@keyword.function"] = { fg = "#0000b5" }
-        highlights["@lsp.typemod.function.declaration"] = { fg = "#1c2833" }
-        highlights["@lsp.type.function"] = { fg = "#1c2833", italic = true }
+        highlights["@lsp.type.function"] = { fg = colors.cyan_cooler }
+        -- highlights["@lsp.typemod.function.declaration"] = { fg = "#c44601", bold = true }
+        highlights["@lsp.type.type"] = { fg = colors.cyan_faint, bold = true, italic = true }
         highlights["@lsp.type.method"] = { fg = colors.cyan_faint }
         highlights["@function.method.call"] = { bold = true }
-        highlights["@function.call"] = { bold = true }
+        highlights["@function.call"] = { fg = colors.green_faint, bold = true }
         -- highlights["@lsp.typemod.function.readonly.typescript"] = { underline = true }
         highlights.Operator = { fg = "#cf000f" }
         highlights.Underlined = { underline = true, fg = "#444444" }
+        -- highlights["@ibl.scope.underline.1"] = { underline = true, sp = "#444444" }
       end,
     })
 

@@ -22,6 +22,7 @@ local colors = {
   brown = "#c44601",
 }
 
+---@diagnostic disable-next-line: unused-local
 local custom16Colors = {
   normal = {
     a = { fg = colors.white, bg = colors.blue, gui = "bold" },
@@ -37,6 +38,7 @@ local custom16Colors = {
     c = { fg = colors.silver, bg = colors.black },
   },
 }
+---@diagnostic disable-next-line: unused-local
 local modernDark = {
   normal = {
     a = { fg = colors.white, bg = colors.grey, gui = "bold" },
@@ -44,8 +46,8 @@ local modernDark = {
     c = { fg = colors.white, bg = colors.black },
   },
   insert = { a = { fg = colors.white, bg = colors.green, gui = "bold" } },
-  visual = { a = { fg = colors.black, bg = colors.hlGreen, gui = "bold" } },
-  replace = { a = { fg = colors.white, bg = colors.red, gui = "bold" } },
+  visual = { a = { fg = colors.black, bg = colors.hlGreen } },
+  replace = { a = { fg = colors.white, bg = colors.red } },
   inactive = {
     a = { fg = colors.silver, bg = colors.gray, gui = "bold" },
     b = { fg = colors.gray, bg = colors.black },
@@ -53,6 +55,7 @@ local modernDark = {
   },
 }
 
+---@diagnostic disable-next-line: unused-local
 local modernVibrant = {
   normal = {
     a = { fg = colors.white, bg = colors.brown, gui = "bold" },
@@ -60,8 +63,37 @@ local modernVibrant = {
     c = { fg = colors.white, bg = colors.black },
   },
   insert = { a = { fg = colors.black, bg = colors.lgreen, gui = "bold" } },
-  visual = { a = { fg = colors.black, bg = colors.hlGreen, gui = "bold" } },
-  replace = { a = { fg = colors.white, bg = colors.red, gui = "bold" } },
+  visual = { a = { fg = colors.black, bg = colors.hlGreen } },
+  replace = { a = { fg = colors.white, bg = colors.red } },
+  inactive = {
+    a = { fg = colors.silver, bg = colors.gray, gui = "bold" },
+    b = { fg = colors.gray, bg = colors.black },
+    c = { fg = colors.silver, bg = colors.black },
+  },
+}
+
+---@diagnostic disable-next-line: unused-local
+local plainColors = {
+  normal = {
+    a = { fg = colors.white, bg = colors.brown, gui = "bold" },
+    b = { fg = colors.white, bg = colors.brown },
+    c = { fg = colors.white, bg = colors.brown },
+  },
+  insert = {
+    a = { fg = colors.black, bg = colors.lgreen, gui = "bold" },
+    b = { fg = colors.black, bg = colors.lgreen },
+    c = { fg = colors.black, bg = colors.lgreen },
+  },
+  visual = {
+    a = { fg = colors.black, bg = colors.hlGreen, gui = "bold" },
+    b = { fg = colors.black, bg = colors.hlGreen },
+    c = { fg = colors.black, bg = colors.hlGreen },
+  },
+  replace = {
+    a = { fg = colors.white, bg = colors.red, gui = "bold" },
+    b = { fg = colors.white, bg = colors.red },
+    c = { fg = colors.white, bg = colors.red },
+  },
   inactive = {
     a = { fg = colors.silver, bg = colors.gray, gui = "bold" },
     b = { fg = colors.gray, bg = colors.black },
@@ -79,7 +111,7 @@ return {
     require("lualine").setup({
       options = {
         icons_enabled = true,
-        theme = modernVibrant,
+        theme = plainColors,
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
         disabled_filetypes = {
@@ -98,10 +130,10 @@ return {
       sections = {
         lualine_a = {
           {
-            "mode",
-            fmt = function(str)
-              return " " .. str
+            function()
+              return vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
             end,
+            icon = " ", -- Git repository folder icon
           },
         },
         lualine_b = {}, -- { "branch", "diff", "diagnostics" },
